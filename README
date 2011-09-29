@@ -1,0 +1,6 @@
+Mootools Placeholder 
+
+Extending standard Mootools Element class. Add new function addPlaceholder and removePlaceholder responsible for creating and deleting placeholder. 
+Every new placeholder create a wrapper of selected element and put some new div element over selected old one. Div may contain some text or user can simply define some extra CSS styles changes looks of old element.    
+
+

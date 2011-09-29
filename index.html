@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Mootools Placeholder</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="http://mootools.net/download/get/mootools-core-1.4.0-full-nocompat-yc.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+	
+</head>
+<body>
+	<form id="example_form_1">
+		<input type="text" id="name" name="name" value="" />
+		<input type="text" id="surname" name="surname" value="" />
+		<input type="text" id="phone" name="phone" value="" />
+	</form>
+	<br/>
+	<form id="example_form_2">
+		<textarea id="content"></textarea>
+	</form>
+	<br/>
+	<form id="example_form_3">
+		<input type="text" id="company_name" name="company_name" value="" />
+		<input type="text" id="company_vat" name="company_vat" value="" />
+	</form>
+</body>
+<script type="text/javascript">
+	
+	(function() {
+		$('name').addPlaceholder(null, {'text': 'User name'});
+		$('surname').addPlaceholder(null, {'text': 'User surname'});
+		$('surname').addPlaceholder(null, {'name': 'red', 'text': '', 'css_class': 'red_placeholder'});
+		$('phone').addPlaceholder(null, {'text': 'Phone number XXX-XX-XX'});
+		
+		$('content').addPlaceholder(null, {'text': 'Article content'});
+		
+		new Placeholder($('company_name'), {'text': 'Company name'});
+		$('company_vat').addPlaceholder('my_placeholder', {'text': 'VAT'});
+		$('company_vat').removePlaceholder('my_placeholder');
+		
+	})();
+
+</script>
+</html>
