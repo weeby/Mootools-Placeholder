@@ -167,6 +167,10 @@ Element.implement('removePlaceholder', function(){
 	}
 	
 	var placeholder = this.retrieve(name, null);
+	if (!placeholder)
+	{
+		return null;
+	}
 	placeholder.destroy();
 	placeholder = null;
 	
