@@ -56,6 +56,12 @@ var Placeholder = new Class({
 		this.element.addEvent('blur', this.onBlur.bind(this));
 		this.placeholder.addEvent('click', this.onClick.bind(this));
 		
+		// Set start state
+		if (this.element.value.length)
+		{
+			this.element.fireEvent('focus');
+		}
+		
 	},
 	
 	/**
